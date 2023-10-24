@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+{{-- stylesheet  --}}
 <link rel="stylesheet" href="{{asset('assets/style.css')}}">
-<body>
+ <body>
+    {{-- table starts --}} 
     <table class="table">
     <h2>Employe's Data : </h2>
         <tr>
@@ -25,6 +27,8 @@
             </tr>
         @endforeach
     </table>
+    {{-- table ends  --}}
+    {{-- button --}}
     <a href="{{url('pdf-generate')}}" class="link"><button>Generate Pdf</button></a>
 </body>
 </html>
