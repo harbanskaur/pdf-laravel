@@ -34,4 +34,20 @@ class PdfController extends Controller
         }
         return $pdf->Output('student.pdf','I');
     }
+
+    public function Pdf()
+    {
+        $pdf = new TCPDF();
+        $pdf->SetTitle('Sample PDF Document');
+        
+        // Add a page
+        $pdf->AddPage();
+
+        // Set some content
+        $content = 'This is the content of the PDF document.';
+        $pdf->writeHTML($content, true, false, true, false, '');
+
+        // Output the PDF to the browser
+        $pdf->Output('sample.pdf', 'I');
+    }
 }

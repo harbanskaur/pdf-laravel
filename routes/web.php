@@ -15,3 +15,4 @@ use App\Http\Controllers\PdfController;
 
 Route::get('/',[PdfController::class,'index']);
 Route::get('/pdf-generate',[PdfController::class,'generatePDF']);
+Route::get('/generate-pdf', [PdfController::class, 'Pdf']);
